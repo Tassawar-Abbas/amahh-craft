@@ -292,6 +292,40 @@ h2 {
   to { transform: translateX(-50%); }
 }
 
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes floatYSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(1deg); }
+}
+
+/* ─── Tilt glare overlay (applied via JS --glare-* vars) ─ */
+
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, 0.13),
+    transparent 58%
+  );
+  pointer-events: none;
+  opacity: var(--glare-opacity, 0);
+  transition: opacity 0.25s ease;
+  z-index: 1;
+}
+
 /* ─── Responsive ─────────────────────────────────── */
 
 @media (max-width: 1080px) {

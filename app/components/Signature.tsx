@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import styles from "./Signature.module.css";
+import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
 type FilterKey = "All" | "Web" | "Mobile" | "Enterprise" | "AI";
 
@@ -112,7 +113,9 @@ export default function Signature() {
           {filtered.map((project, i) => (
             <article
               key={project.title}
-              className={`${styles.bentoCard} ${project.size === "large" ? styles.bentoLarge : ""} ${project.size === "tall" ? styles.bentoTall : ""} ${i === 0 ? styles.bentoAccent : ""}`}
+              className={`${styles.bentoCard} ${project.size === "large" ? styles.bentoLarge : ""} ${project.size === "tall" ? styles.bentoTall : ""} ${i === 0 ? styles.bentoAccent : ""} tilt-card`}
+              onMouseMove={(e) => applyTilt(e, 5, 10)}
+              onMouseLeave={resetTilt}
               data-reveal
             >
               <div className={styles.projectHeader}>

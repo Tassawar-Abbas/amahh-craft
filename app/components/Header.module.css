@@ -44,6 +44,12 @@
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
+  animation: floatY 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
 }
 
 .brandMark::before,

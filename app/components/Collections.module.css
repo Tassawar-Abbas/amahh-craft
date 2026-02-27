@@ -27,7 +27,6 @@
 }
 
 .spotlightCard:hover {
-  transform: translateY(-8px) scale(1.012);
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 30px 72px rgba(0, 0, 0, 0.46);
 }

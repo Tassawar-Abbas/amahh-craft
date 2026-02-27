@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./Reviews.module.css";
+import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
 const testimonials = [
   {
@@ -143,7 +144,11 @@ export default function Reviews() {
           <div className={styles.testimonialTrack} style={{ transform: `translateX(-${current * 100}%)` }}>
             {testimonials.map((item, i) => (
               <article key={i} className={styles.testimonial}>
-                <div className={styles.quotePanel}>
+                <div
+                  className={`${styles.quotePanel} tilt-card`}
+                  onMouseMove={(e) => applyTilt(e, 5, 8)}
+                  onMouseLeave={resetTilt}
+                >
                   <div className={styles.quoteMark}>&ldquo;</div>
                   <p>{item.quote}</p>
                   <div className={styles.person}>
@@ -154,7 +159,11 @@ export default function Reviews() {
                     </div>
                   </div>
                 </div>
-                <div className={styles.resultCard}>
+                <div
+                  className={`${styles.resultCard} tilt-card`}
+                  onMouseMove={(e) => applyTilt(e, 5, 8)}
+                  onMouseLeave={resetTilt}
+                >
                   <div>
                     <div className={styles.rating}>★★★★★</div>
                     <h3>{item.heading}</h3>

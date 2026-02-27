@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import styles from "./FAQ.module.css";
+import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
 export default function FAQ() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -79,9 +80,7 @@ export default function FAQ() {
                   <a href="https://wa.me/923249274607" target="_blank" rel="noopener noreferrer">
                     +92 324 9274607
                   </a>
-                  <a href="https://wa.me/923116676939" target="_blank" rel="noopener noreferrer">
-                    +92 311 6676939
-                  </a>
+                 
                 </div>
               </div>
             </div>
@@ -95,7 +94,13 @@ export default function FAQ() {
           </div>
 
           {/* Contact form */}
-          <div className={styles.faqList} ref={listRef} data-reveal>
+          <div
+            className={`${styles.faqList} tilt-card`}
+            ref={listRef}
+            onMouseMove={(e) => applyTilt(e, 3, 6)}
+            onMouseLeave={resetTilt}
+            data-reveal
+          >
             {sent ? (
               <div className={styles.successMsg}>
                 <div className={styles.successIcon}>✓</div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./Process.module.css";
+import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
 const steps = [
   {
@@ -70,7 +71,13 @@ export default function Process() {
 
         <div className={styles.processGrid}>
           {steps.map((step) => (
-            <article key={step.num} className={styles.step} data-reveal>
+            <article
+              key={step.num}
+              className={`${styles.step} tilt-card`}
+              onMouseMove={(e) => applyTilt(e, 10, 16)}
+              onMouseLeave={resetTilt}
+              data-reveal
+            >
               <div className={styles.stepNum}>{step.num}</div>
               <h3>{step.title}</h3>
               <p>{step.desc}</p>

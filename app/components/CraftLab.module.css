@@ -88,9 +88,33 @@
   transition: 0.35s ease;
 }
 
-.artCard:nth-child(1) { top: 12%; left: 14%; transform: rotate(-8deg); }
-.artCard:nth-child(2) { top: 38%; left: 22%; transform: rotate(6deg); }
-.artCard:nth-child(3) { top: 64%; left: 10%; transform: rotate(-4deg); }
+.artCard:nth-child(1) {
+  top: 12%; left: 14%; transform: rotate(-8deg);
+  animation: floatCard1 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+.artCard:nth-child(2) {
+  top: 38%; left: 22%; transform: rotate(6deg);
+  animation: floatCard2 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation-delay: -1.5s;
+}
+.artCard:nth-child(3) {
+  top: 64%; left: 10%; transform: rotate(-4deg);
+  animation: floatCard3 4.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation-delay: -3s;
+}
+
+@keyframes floatCard1 {
+  0%, 100% { transform: rotate(-8deg) translateY(0px); }
+  50%       { transform: rotate(-8deg) translateY(-8px); }
+}
+@keyframes floatCard2 {
+  0%, 100% { transform: rotate(6deg) translateY(0px); }
+  50%       { transform: rotate(6deg) translateY(-10px); }
+}
+@keyframes floatCard3 {
+  0%, 100% { transform: rotate(-4deg) translateY(0px); }
+  50%       { transform: rotate(-4deg) translateY(-7px); }
+}
 
 .artCard h4 {
   font-size: 1rem;

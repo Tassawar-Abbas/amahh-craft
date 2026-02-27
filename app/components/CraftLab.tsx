@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import styles from "./CraftLab.module.css";
+import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
 type TabKey = "frontend" | "backend" | "mobile" | "cloud" | "ai";
 
@@ -183,7 +184,13 @@ export default function CraftLab() {
             ))}
           </div>
 
-          <div className={styles.labPreview} ref={previewRef} data-reveal>
+          <div
+            className={`${styles.labPreview} tilt-card`}
+            ref={previewRef}
+            onMouseMove={(e) => applyTilt(e, 4, 8)}
+            onMouseLeave={resetTilt}
+            data-reveal
+          >
             <div className={styles.labShell}>
               <div
                 className={styles.previewArt}

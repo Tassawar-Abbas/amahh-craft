@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./Hero.module.css";
+import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
 const stats = [
   { value: "50+", label: "successful projects delivered across web, mobile, and enterprise" },
@@ -127,7 +128,12 @@ export default function Hero() {
         {/* Stats */}
         <div className={styles.stats} ref={statsRef} data-reveal>
           {stats.map((stat) => (
-            <div key={stat.value} className={styles.stat}>
+            <div
+              key={stat.value}
+              className={`${styles.stat} tilt-card`}
+              onMouseMove={(e) => applyTilt(e, 8, 12)}
+              onMouseLeave={resetTilt}
+            >
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>
             </div>

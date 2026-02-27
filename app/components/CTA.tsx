@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./CTA.module.css";
+import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
 export default function CTA() {
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -30,7 +31,13 @@ export default function CTA() {
   return (
     <section className={styles.ctaSection}>
       <div className="container">
-        <div className={styles.cta} ref={ctaRef} data-reveal>
+        <div
+          className={`${styles.cta} tilt-card`}
+          ref={ctaRef}
+          onMouseMove={(e) => applyTilt(e, 3, 8)}
+          onMouseLeave={resetTilt}
+          data-reveal
+        >
           <div>
             <span className="eyebrow">Ready to build something great?</span>
             <h2 className="title-lg" style={{ marginTop: "14px" }}>
@@ -79,7 +86,7 @@ export default function CTA() {
               <div className={styles.footerCol}>
                 <h4>Contact Us</h4>
                 <a href="tel:+923249274607">+92 324 9274607</a>
-                <a href="tel:+923116676939">+92 311 6676939</a>
+                
                 <a href="mailto:amahh.tech@gmail.com">amahh.tech@gmail.com</a>
               </div>
             </div>
