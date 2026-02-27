@@ -1,0 +1,206 @@
+.testimonialWrap {
+  margin-top: 28px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  box-shadow: var(--shadow);
+}
+
+.testimonialTrack {
+  display: flex;
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.testimonial {
+  min-width: 100%;
+  padding: 34px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 18px;
+  align-items: center;
+}
+
+/* ─── Quote panel ────────────────────────────────── */
+
+.quotePanel {
+  border-radius: 26px;
+  padding: 26px;
+  min-height: 280px;
+  background: radial-gradient(circle at top right, rgba(255, 139, 123, 0.16), transparent 24%),
+    linear-gradient(180deg, #241d2a, #17131d);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quoteMark {
+  font-family: var(--font-playfair), "Playfair Display", serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: #ffd7b4;
+}
+
+.quotePanel p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #f2eaf6;
+  max-width: 40ch;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-3));
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.person small {
+  display: block;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ─── Result card ────────────────────────────────── */
+
+.resultCard {
+  border-radius: 26px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rating {
+  display: flex;
+  gap: 6px;
+  color: #ffc75d;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.resultCard h3 {
+  font-size: 1.2rem;
+}
+
+.resultTop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.miniResult {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.miniResult b {
+  display: block;
+  color: #ffe2bf;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.miniResult span {
+  line-height: 1.55;
+  color: #e8dcef;
+  font-size: 0.9rem;
+}
+
+/* ─── Controls ───────────────────────────────────── */
+
+.testimonialControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition: width 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.22s ease;
+  padding: 0;
+}
+
+.dotActive {
+  width: 28px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+}
+
+.controlBtns {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBtn {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.18s ease;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.iconBtn:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ─── Responsive ─────────────────────────────────── */
+
+@media (max-width: 1080px) {
+  .testimonial {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .testimonial {
+    padding: 24px;
+  }
+
+  .testimonialControls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

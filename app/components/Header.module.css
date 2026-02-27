@@ -1,0 +1,166 @@
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding: 18px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 13, 19, 0.86),
+    rgba(15, 13, 19, 0.4),
+    transparent
+  );
+  backdrop-filter: blur(18px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.brandMark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), transparent 25%),
+    linear-gradient(135deg, var(--accent), var(--accent-3));
+  box-shadow: 0 14px 30px rgba(169, 140, 255, 0.22);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brandMark::before,
+.brandMark::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.brandMark::before {
+  width: 18px;
+  height: 4px;
+  transform: rotate(32deg);
+}
+
+.brandMark::after {
+  width: 4px;
+  height: 18px;
+  transform: rotate(32deg);
+}
+
+.brandText span {
+  display: block;
+}
+
+.brandText small {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.72rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #ddd3ea;
+  font-size: 0.95rem;
+}
+
+.navLinks a {
+  position: relative;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  transition: right 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navLinks a:hover::after {
+  right: 0;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuToggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  place-items: center;
+}
+
+.mobileMenu {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(22, 19, 27, 0.92);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.mobileMenu a {
+  display: flex;
+  width: 100%;
+  padding: 14px 12px;
+  color: var(--text);
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.mobileMenu a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 760px) {
+  .siteHeader {
+    padding: 12px 0;
+  }
+
+  .navLinks,
+  .navActions :global(.btn) {
+    display: none;
+  }
+
+  .menuToggle {
+    display: grid;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav {
+    padding: 12px;
+  }
+}

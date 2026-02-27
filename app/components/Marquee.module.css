@@ -1,0 +1,30 @@
+.marqueeWrap {
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  gap: 28px;
+  min-width: max-content;
+  animation: marquee 28s linear infinite;
+  color: #e9dde6;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.marquee span {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.marquee span::after {
+  content: "✦";
+  color: var(--accent-2);
+}
