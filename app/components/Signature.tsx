@@ -13,35 +13,35 @@ const projects = [
     title: "Global Airport Taxi",
     desc: "A seamless transportation booking system with real-time tracking, driver management, and automated dispatch for airport transfers worldwide.",
     tags: ["Web", "Mobile"],
-    chips: ["React", "Node.js", "Real-time", "Maps API"],
+    chips: ["React", "Html", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript"],
     size: "large",
   },
   {
     title: "Tamadres",
     desc: "Online bookstore and cultural platform that aims to remind readers that books are products of culture — with curated collections and community features.",
     tags: ["Web"],
-    chips: ["Next.js", "E-commerce", "CMS"],
+    chips: ["React", "Html", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript", "E-commerce", "CMS"],
     size: "normal",
   },
   {
     title: "Partner Dashboard Management",
     desc: "All-in-one platform for coaches, course creators, and community builders to share knowledge, engage audiences, and monetize content.",
     tags: ["Enterprise", "Web"],
-    chips: ["Dashboard", "Analytics", "Payments"],
+    chips: ["React", "Html5", "CSS3", "Bootstrap", "JavaScript", "Tailwind Css", "Node J's", "Express J's", "MongoDb", "AWS", "Context Api"],
     size: "tall",
   },
   {
     title: "Member Learning & Events",
     desc: "Wisdome's dashboard offers a centralized hub for creators to manage courses, events, and community interactions with audience engagement tools.",
     tags: ["Enterprise", "Web"],
-    chips: ["LMS", "Events", "Community"],
+    chips: ["React", "Html5", "CSS3", "Bootstrap", "JavaScript", "Tailwind Css", "Node J's", "Express J's", "MongoDb", "AWS", "Context Api"],
     size: "normal",
   },
   {
     title: "Wisdome Mobile App",
     desc: "Mobile-first learning experience for community members — course access, live events, challenges, and social engagement on iOS and Android.",
     tags: ["Mobile"],
-    chips: ["React Native", "Push Notifications", "Offline"],
+    chips: ["React Native", "Push Notifications", "Node J's", "Express J's", "MongoDb", "AWS", "Context Api"],
     size: "normal",
   },
 ];
@@ -86,7 +86,7 @@ export default function Signature() {
           <div ref={headRef} data-reveal>
             <span className="eyebrow">Our Creations at Amahh</span>
             <h2 className="title-lg">
-              Dive into our portfolio — blending imagination and impact.
+              Dive into our portfolio blending imagination and impact.
             </h2>
           </div>
           <p className="lead" ref={leadRef} data-reveal>

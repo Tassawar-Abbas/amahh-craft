@@ -157,7 +157,7 @@ export default function CraftLab() {
           <div ref={headRef} data-reveal>
             <span className="eyebrow">Technologies</span>
             <h2 className="title-lg">
-              Cutting-edge tech stacks for every challenge.
+              Cutting edge tech stacks for every challenge.
             </h2>
           </div>
           <p className="lead" ref={leadRef} data-reveal>

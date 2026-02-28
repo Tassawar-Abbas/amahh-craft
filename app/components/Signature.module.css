@@ -17,7 +17,7 @@
   font-size: 0.9rem;
   cursor: pointer;
   transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease,
-              transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+    transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .filterBtn:hover {
@@ -53,8 +53,8 @@
   flex-direction: column;
   gap: 10px;
   transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
-              border-color 0.22s ease,
-              box-shadow 0.22s ease;
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
 }
 
 .bentoCard:hover {
@@ -74,12 +74,11 @@
 }
 
 .bentoLarge {
-  grid-row: span 2;
-  min-height: 458px;
+  /* removed rigid span/min-height to let cards wrap text naturally */
 }
 
 .bentoTall {
-  grid-row: span 2;
+  /* removed rigid span to let cards wrap text naturally */
 }
 
 .bentoAccent {
@@ -142,8 +141,14 @@
   transform-origin: center;
 }
 
-.shapeStack i:nth-child(1) { transform: rotate(-8deg) translateY(12px); }
-.shapeStack i:nth-child(2) { transform: rotate(6deg) translateX(-10px); }
+.shapeStack i:nth-child(1) {
+  transform: rotate(-8deg) translateY(12px);
+}
+
+.shapeStack i:nth-child(2) {
+  transform: rotate(6deg) translateX(-10px);
+}
+
 .shapeStack i:nth-child(3) {
   transform: none;
   background: linear-gradient(135deg, rgba(255, 139, 123, 0.24), rgba(169, 140, 255, 0.18));

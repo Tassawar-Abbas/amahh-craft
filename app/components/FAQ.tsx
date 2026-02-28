@@ -7,6 +7,7 @@ import { applyTilt, resetTilt } from "@/app/lib/tilt";
 export default function FAQ() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const headRef = useRef<HTMLDivElement>(null);
   const leadRef = useRef<HTMLParagraphElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
@@ -35,9 +36,28 @@ export default function FAQ() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
+
+      if (response.ok) {
+        setSent(true);
+      } else {
+        alert("Failed to send message. Please try your email client directly.");
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+      alert("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -80,7 +100,7 @@ export default function FAQ() {
                   <a href="https://wa.me/923249274607" target="_blank" rel="noopener noreferrer">
                     +92 324 9274607
                   </a>
-                 
+
                 </div>
               </div>
             </div>
@@ -153,8 +173,13 @@ export default function FAQ() {
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                   />
                 </div>
-                <button type="submit" className="btn btn-primary" style={{ width: "100%" }}>
-                  Send Message
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  style={{ width: "100%" }}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}

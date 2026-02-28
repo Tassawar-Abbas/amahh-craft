@@ -1,16 +1,9 @@
 import styles from "./Marquee.module.css";
 
 const items = [
-  "Artificial Intelligence",
   "Machine Learning",
-  "Cloud Solutions",
-  "IoT Development",
-  "AR & VR",
-  "Blockchain",
-  "Data Analytics",
   "Web Development",
   "Mobile Apps",
-  "Cybersecurity",
 ];
 
 export default function Marquee() {
