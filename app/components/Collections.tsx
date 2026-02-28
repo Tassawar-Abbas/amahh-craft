@@ -75,7 +75,6 @@ function SpotlightCard({ card }: { card: (typeof cards)[0] }) {
       <div>
         <div className={styles.cardTop}>
           <div className={styles.cardIcon}>{card.icon}</div>
-          <div className={styles.cardIndex}>{card.index}</div>
         </div>
         <h3>{card.title}</h3>
         <p>{card.desc}</p>

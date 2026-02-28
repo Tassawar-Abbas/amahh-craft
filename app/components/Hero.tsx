@@ -20,8 +20,8 @@ const trustPills = [
 const orbitChips = [
   { label: "AI & Machine Learning", cls: styles.chipOne },
   { label: "Cloud Solutions", cls: styles.chipTwo },
-  { label: "IoT Development", cls: styles.chipThree },
-  { label: "Blockchain", cls: styles.chipFour },
+  { label: "Web Development", cls: styles.chipThree },
+  { label: "Mobile Development", cls: styles.chipFour },
 ];
 
 export default function Hero() {
@@ -59,10 +59,10 @@ export default function Hero() {
           {/* Copy */}
           <div className={styles.heroCopy} ref={copyRef} data-reveal>
             <span className="eyebrow">Innovative Software Solutions</span>
-            <h1 className={`title-xl ${styles.heroTitle}`}>
+            <h3 className={`title-lg ${styles.heroTitle}`}>
               Transforming Ideas Into{" "}
               <span className="gradient-text">Digital Reality</span>
-            </h1>
+            </h3>
             <p className="lead" style={{ maxWidth: "58ch" }}>
               We build innovative software solutions that drive business growth and
               enhance user experiences — from custom applications to enterprise

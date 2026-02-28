@@ -15,7 +15,7 @@ export default function Home() {
       <Header />
       <main id="top">
         <Hero />
-        <Marquee />
+        {/* <Marquee /> */}
         <Collections />
         <Signature />
         <CraftLab />

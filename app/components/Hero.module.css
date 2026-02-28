@@ -17,8 +17,8 @@
 }
 
 .heroTitle {
-  font-size: clamp(3rem, 7vw, 6.2rem);
-  max-width: 10ch;
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  max-width: 14ch;
 }
 
 .trustRow {
@@ -63,12 +63,10 @@
   border-radius: 50%;
   width: 470px;
   height: 470px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 139, 123, 0.28),
-    rgba(169, 140, 255, 0.08) 55%,
-    transparent 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 139, 123, 0.28),
+      rgba(169, 140, 255, 0.08) 55%,
+      transparent 70%);
   filter: blur(12px);
   animation: pulse 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   pointer-events: none;
@@ -271,10 +269,33 @@
   flex-shrink: 0;
 }
 
-.chipOne { top: 8%; right: 6%; animation: floatChip 4s cubic-bezier(0.45, 0, 0.55, 1) infinite; animation-delay: -0.8s; }
-.chipTwo { left: 2%; top: 18%; animation: floatChip 5s cubic-bezier(0.45, 0, 0.55, 1) infinite; animation-delay: -2s; }
-.chipThree { right: 4%; bottom: 20%; animation: floatChip 4.5s cubic-bezier(0.45, 0, 0.55, 1) infinite; animation-delay: -3.2s; }
-.chipFour { left: 8%; bottom: 8%; animation: floatChip 5.5s cubic-bezier(0.45, 0, 0.55, 1) infinite; animation-delay: -0.4s; }
+.chipOne {
+  top: 0%;
+  right: -2%;
+  animation: floatChip 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation-delay: -0.8s;
+}
+
+.chipTwo {
+  left: -8%;
+  top: 18%;
+  animation: floatChip 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation-delay: -2s;
+}
+
+.chipThree {
+  right: -6%;
+  bottom: 20%;
+  animation: floatChip 4.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation-delay: -3.2s;
+}
+
+.chipFour {
+  left: 4%;
+  bottom: 2%;
+  animation: floatChip 5.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation-delay: -0.4s;
+}
 
 /* ─── Stats ──────────────────────────────────────── */
 
@@ -323,7 +344,24 @@
   }
 
   .heroStage {
-    min-height: 540px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 30px;
+    margin-top: 32px;
+  }
+
+  .orbitChip {
+    position: relative;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    animation: none !important;
+    transform: none !important;
+    margin: 4px 0;
   }
 
   .heroTitle {
@@ -343,6 +381,8 @@
   .heroBoard {
     width: 100%;
     max-width: 400px;
+    aspect-ratio: auto;
+    height: auto;
   }
 
   .boardGrid {
@@ -358,19 +398,34 @@
     padding: 10px 12px;
   }
 
+
   .stats {
     grid-template-columns: 1fr;
   }
 }
 
 @keyframes floatY {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes floatYSlow {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(0.4deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0.4deg);
+  }
 }
 
 @media (max-width: 520px) {
