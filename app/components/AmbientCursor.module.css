@@ -1,0 +1,25 @@
+.glowSpotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 139, 123, 0.14) 0%,
+    rgba(169, 140, 255, 0.08) 40%,
+    transparent 70%
+  );
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 768px) {
+  .glowSpotlight {
+    display: none;
+  }
+}

@@ -7,14 +7,22 @@ const navLinks = [
   { href: "#top", label: "Home" },
   { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
+  { href: "#estimator", label: "Estimator" },
   { href: "#reviews", label: "Reviews" },
   { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<"dark" | "gold">("dark");
 
   const closeMenu = () => setMenuOpen(false);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "gold" : "dark";
+    setTheme(nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+  };
 
   return (
     <header className={styles.siteHeader}>
@@ -37,6 +45,14 @@ export default function Header() {
           </nav>
 
           <div className={styles.navActions}>
+            <button
+              type="button"
+              className={styles.themeBtn}
+              onClick={toggleTheme}
+              title={`Switch to ${theme === "dark" ? "Gold Luxe" : "Cyber Dark"} theme`}
+            >
+              {theme === "dark" ? "✨ Gold Mode" : "🌙 Cyber Mode"}
+            </button>
             <a href="#contact" className="btn btn-primary">
               Get in Touch
             </a>

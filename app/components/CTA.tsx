@@ -60,7 +60,9 @@ export default function CTA() {
             </div>
             <div className={styles.contactPills}>
               <span className={styles.contactPill}>amahh.tech@gmail.com</span>
-              <span className={styles.contactPill}>+92 324 9274607</span>
+              <a href="https://wa.me/923714932094" target="_blank" rel="noopener noreferrer" className={styles.contactPill}>
+                +92 3714932094
+              </a>
               <span className={styles.contactPill}>Web • Mobile • AI • Cloud</span>
             </div>
           </div>
@@ -85,7 +87,9 @@ export default function CTA() {
               </div>
               <div className={styles.footerCol}>
                 <h4>Contact Us</h4>
-                <a href="tel:+923249274607">+92 324 9274607</a>
+                <a href="https://wa.me/923714932094" target="_blank" rel="noopener noreferrer">
+                  WhatsApp: +92 3714932094
+                </a>
 
                 <a href="mailto:amahh.tech@gmail.com">amahh.tech@gmail.com</a>
               </div>
@@ -93,7 +97,7 @@ export default function CTA() {
           </div>
 
           <div className={styles.footerRow}>
-            <div>© 2024 Amahh. All rights reserved. Crafted with passion.</div>
+            <div>© 2026 Amahh. All rights reserved. Crafted with passion.</div>
             <div className={styles.socialLinks}>
               <a href="https://github.com/Tassawar-Abbas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

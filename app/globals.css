@@ -16,6 +16,16 @@
   --container: 1180px;
 }
 
+[data-theme="gold"] {
+  --bg: #120e0a;
+  --bg-soft: #1c1610;
+  --card: #1a140f;
+  --card-2: #241c15;
+  --accent: #f5c66c;
+  --accent-2: #ff9e79;
+  --accent-3: #ffd79e;
+}
+
 *,
 *::before,
 *::after {

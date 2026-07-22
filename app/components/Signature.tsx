@@ -11,21 +11,23 @@ const filters: FilterKey[] = ["All", "Web", "Mobile", "Enterprise", "AI"];
 const projects = [
   {
     title: "Global Airport Taxi",
-    desc: "A seamless transportation booking system with real-time tracking, driver management, and automated dispatch for airport transfers worldwide.",
+    desc: "A seamless transportation booking system with real time tracking, driver management, and automated dispatch for airport transfers worldwide.",
     tags: ["Web", "Mobile"],
     chips: ["React", "Html", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript"],
     size: "large",
+    link: "https://globalairporttaxi.com",
   },
   {
     title: "Tamadres",
-    desc: "Online bookstore and cultural platform that aims to remind readers that books are products of culture — with curated collections and community features.",
+    desc: "Online bookstore and cultural platform that aims to remind readers that books are products of culture with curated collections and community features.",
     tags: ["Web"],
     chips: ["React", "Html", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript", "E-commerce", "CMS"],
     size: "normal",
+    link: "https://tamadres.com/",
   },
   {
     title: "Partner Dashboard Management",
-    desc: "All-in-one platform for coaches, course creators, and community builders to share knowledge, engage audiences, and monetize content.",
+    desc: "All in one platform for coaches, course creators, and community builders to share knowledge, engage audiences, and monetize content.",
     tags: ["Enterprise", "Web"],
     chips: ["React", "Html5", "CSS3", "Bootstrap", "JavaScript", "Tailwind Css", "Node J's", "Express J's", "MongoDb", "AWS", "Context Api"],
     size: "tall",
@@ -39,7 +41,7 @@ const projects = [
   },
   {
     title: "Wisdome Mobile App",
-    desc: "Mobile-first learning experience for community members — course access, live events, challenges, and social engagement on iOS and Android.",
+    desc: "Mobile first learning experience for community members course access, live events, challenges, and social engagement on iOS and Android.",
     tags: ["Mobile"],
     chips: ["React Native", "Push Notifications", "Node J's", "Express J's", "MongoDb", "AWS", "Context Api"],
     size: "normal",
@@ -90,7 +92,7 @@ export default function Signature() {
             </h2>
           </div>
           <p className="lead" ref={leadRef} data-reveal>
-            From transportation platforms to e-learning ecosystems — we build
+            From transportation platforms to e learning ecosystems. We build
             digital products that solve real problems and create lasting value
             for businesses and their users.
           </p>
@@ -128,7 +130,13 @@ export default function Signature() {
                   <span key={chip} className="chip">{chip}</span>
                 ))}
               </div>
-              <a href="#contact" className={styles.projectLink}>View Details →</a>
+              <a
+                href={project.link || "#contact"}
+                className={styles.projectLink}
+                {...(project.link ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
+                View Details →
+              </a>
               {project.size === "large" && (
                 <div className={styles.shapeStack}><i /><i /><i /></div>
               )}

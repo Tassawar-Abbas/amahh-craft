@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Amahh — Innovative Software Solutions",
   description:
-    "We build innovative software solutions that drive business growth and enhance user experiences — custom software, mobile apps, web development, cloud, AI, and cybersecurity.",
+    "We build innovative software solutions that drive business growth and enhance user experiences custom software, mobile apps, web development, cloud, AI, and cybersecurity.",
   keywords: [
     "software development",
     "mobile app development",

@@ -16,6 +16,33 @@
   gap: 20px;
 }
 
+.ratingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(245, 198, 108, 0.12);
+  border: 1px solid rgba(245, 198, 108, 0.3);
+  backdrop-filter: blur(12px);
+  width: fit-content;
+}
+
+.starsRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #f5c66c;
+  font-size: 0.95rem;
+}
+
+.ratingText {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #fff3df;
+  letter-spacing: 0.01em;
+}
+
 .heroTitle {
   font-size: clamp(2.5rem, 5vw, 4.8rem);
   max-width: 14ch;

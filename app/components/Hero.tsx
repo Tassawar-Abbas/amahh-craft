@@ -8,7 +8,7 @@ const stats = [
   { value: "50+", label: "successful projects delivered across web, mobile, and enterprise" },
   { value: "30+", label: "satisfied clients from startups to global enterprises" },
   { value: "5+", label: "years of experience building innovative software solutions" },
-  { value: "98%", label: "client satisfaction rate with on-time, on-budget delivery" },
+  { value: "98%", label: "client satisfaction rate with on time, on budget delivery" },
 ];
 
 const trustPills = [
@@ -58,6 +58,12 @@ export default function Hero() {
         <div className={styles.heroGrid}>
           {/* Copy */}
           <div className={styles.heroCopy} ref={copyRef} data-reveal>
+            <div className={styles.ratingBadge}>
+              <div className={styles.starsRow}>
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span className={styles.ratingText}>5.0 Rating (30+ Satisfied Global Clients)</span>
+            </div>
             <span className="eyebrow">Innovative Software Solutions</span>
             <h3 className={`title-lg ${styles.heroTitle}`}>
               Transforming Ideas Into{" "}
@@ -65,7 +71,7 @@ export default function Hero() {
             </h3>
             <p className="lead" style={{ maxWidth: "58ch" }}>
               We build innovative software solutions that drive business growth and
-              enhance user experiences — from custom applications to enterprise
+              enhance user experiences from custom applications to enterprise
               platforms powered by AI, Cloud, and modern engineering.
             </p>
             <div className="btn-row">
@@ -95,7 +101,7 @@ export default function Hero() {
               <div className={styles.boardGrid}>
                 <div className={styles.paperStack}>
                   <div className={styles.paperTitle}>Amahh Build</div>
-                  <p>End-to-end software development — from architecture to deployment with a focus on scale, performance, and user experience.</p>
+                  <p>End to end software development from architecture to deployment with a focus on scale, performance, and user experience.</p>
                   <div className={styles.paperMeta}>
                     <span>Full Stack</span>
                     <span>AI Powered</span>
