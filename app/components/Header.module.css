@@ -36,40 +36,10 @@
   width: 42px;
   height: 42px;
   border-radius: 14px;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), transparent 25%),
-    linear-gradient(135deg, var(--accent), var(--accent-3));
-  box-shadow: 0 14px 30px rgba(169, 140, 255, 0.22);
-  position: relative;
   overflow: hidden;
   flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(169, 140, 255, 0.25);
   animation: floatY 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-}
-
-@keyframes floatY {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-4px); }
-}
-
-.brandMark::before,
-.brandMark::after {
-  content: "";
-  position: absolute;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.brandMark::before {
-  width: 18px;
-  height: 4px;
-  transform: rotate(32deg);
-}
-
-.brandMark::after {
-  width: 4px;
-  height: 18px;
-  transform: rotate(32deg);
 }
 
 .brandText span {

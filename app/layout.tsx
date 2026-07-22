@@ -28,12 +28,18 @@ export const metadata: Metadata = {
     "custom software",
     "Amahh",
   ],
+  icons: {
+    icon: "/image.png",
+    shortcut: "/image.png",
+    apple: "/image.png",
+  },
   openGraph: {
     title: "Amahh — Innovative Software Solutions",
     description:
       "Transforming ideas into digital reality. Full-stack software development, AI, cloud, and mobile solutions for businesses worldwide.",
     type: "website",
     url: "https://www.amahhtechnology.com/",
+    images: [{ url: "/image.png" }],
   },
 };
 

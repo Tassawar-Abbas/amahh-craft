@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -29,7 +30,16 @@ export default function Header() {
       <div className="container">
         <div className={styles.nav}>
           <a href="#top" className={styles.brand} aria-label="Amahh Craft home">
-            <div className={styles.brandMark} />
+            <div className={styles.brandMark}>
+              <Image
+                src="/image.png"
+                alt="Amahh Logo"
+                width={42}
+                height={42}
+                style={{ borderRadius: "12px", objectFit: "cover" }}
+                priority
+              />
+            </div>
             <div className={styles.brandText}>
               <span>Amahh</span>
               <small>Innovative Software Solutions</small>
