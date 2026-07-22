@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "Transforming ideas into digital reality. Full-stack software development, AI, cloud, and mobile solutions for businesses worldwide.",
     type: "website",
-    url: "https://amahh-craft.vercel.app",
+    url: "https://www.amahhtechnology.com/",
   },
 };
 
