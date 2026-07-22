@@ -9,7 +9,7 @@ const cards = [
     icon: "⚡",
     index: "01",
     title: "Custom Software Development",
-    desc: "Tailor-made software solutions built to your exact specifications — scalable, maintainable, and designed to solve real business problems.",
+    desc: "Tailor made software solutions built to your exact specifications scalable, maintainable, and designed to solve real business problems.",
     chips: ["Full Stack", "API Design", "Microservices"],
     link: { href: "#contact", label: "Start a project →" },
   },
@@ -17,7 +17,7 @@ const cards = [
     icon: "📱",
     index: "02",
     title: "Mobile App Development",
-    desc: "Cross-platform and native mobile applications that deliver seamless user experiences on iOS and Android with high performance.",
+    desc: "Cross platform and native mobile applications that deliver seamless user experiences on iOS and Android with high performance.",
     chips: ["React Native", "Flutter", "iOS / Android"],
     link: { href: "#contact", label: "Build your app →" },
   },
@@ -25,7 +25,7 @@ const cards = [
     icon: "🌐",
     index: "03",
     title: "Web Development",
-    desc: "Modern, responsive web applications and websites built with cutting-edge frameworks — fast, accessible, and conversion-optimized.",
+    desc: "Modern, responsive web applications and websites built with cutting edge frameworks fast, accessible, and conversion optimized.",
     chips: ["Next.js", "React", "TypeScript"],
     link: { href: "#contact", label: "Launch your site →" },
   },
@@ -33,7 +33,7 @@ const cards = [
     icon: "☁️",
     index: "04",
     title: "Cloud Solutions",
-    desc: "End-to-end cloud architecture, migration, and DevOps — secure, resilient infrastructure that scales with your business.",
+    desc: "End to end cloud architecture, migration, and DevOps secure, resilient infrastructure that scales with your business.",
     chips: ["AWS", "GCP", "Docker / K8s"],
     link: { href: "#contact", label: "Go cloud-native →" },
   },
@@ -41,7 +41,7 @@ const cards = [
     icon: "📊",
     index: "05",
     title: "Data Analytics",
-    desc: "Transform raw data into actionable business intelligence — dashboards, ML models, pipelines, and predictive analytics.",
+    desc: "Transform raw data into actionable business intelligence dashboards, ML models, pipelines, and predictive analytics.",
     chips: ["Python", "BI Dashboards", "ML Models"],
     link: { href: "#contact", label: "Unlock your data →" },
   },
@@ -132,8 +132,8 @@ export default function Collections() {
             </h2>
           </div>
           <p className="lead" ref={leadRef} data-reveal>
-            We offer a full range of software development services — from ideation
-            to deployment — tailored to your business goals and built for long-term
+            We offer a full range of software development services, from ideation
+            to deployment, tailored to your business goals and built for long-term
             scalability.
           </p>
         </div>

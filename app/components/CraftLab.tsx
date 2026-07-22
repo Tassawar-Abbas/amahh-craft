@@ -21,29 +21,29 @@ interface TabData {
 const labData: Record<TabKey, TabData> = {
   frontend: {
     title: "Frontend Development",
-    text: "We craft blazing-fast, pixel-perfect user interfaces using modern frameworks that deliver exceptional user experiences across all devices.",
+    text: "We craft blazing fast, pixel-perfect user interfaces using modern frameworks that deliver exceptional user experiences across all devices.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     swatches: ["#61dafb", "#000000", "#3178c6", "#06b6d4"],
     metric1: "Web, PWA, Dashboard",
-    metric2: "2–4 weeks for MVPs",
+    metric2: "2 4 weeks for MVPs",
     metric3: "SSR, CSR, Static, Edge",
     cards: [
-      { title: "React & Next.js", text: "Component-driven UIs with server-side rendering for peak SEO performance." },
-      { title: "TypeScript", text: "Type-safe codebases that scale cleanly as your product grows." },
-      { title: "UI/UX Design", text: "Figma-to-code workflows with pixel-perfect responsive implementations." },
+      { title: "React & Next.js", text: "Component driven UIs with server side rendering for peak SEO performance." },
+      { title: "TypeScript", text: "Type safe codebases that scale cleanly as your product grows." },
+      { title: "UI/UX Design", text: "Figma to code workflows with pixel perfect responsive implementations." },
     ],
     bg: "radial-gradient(circle at 20% 20%,rgba(97,218,251,.16),transparent 22%), linear-gradient(160deg,#1a2b3b,#12191d)",
   },
   backend: {
     title: "Backend & APIs",
-    text: "Robust, scalable server-side architecture with RESTful and GraphQL APIs, microservices, and real-time systems built to handle growth.",
+    text: "Robust, scalable server side architecture with RESTful and GraphQL APIs, microservices, and real-time systems built to handle growth.",
     tags: ["Node.js", "Python", "Django", "PostgreSQL"],
     swatches: ["#68a063", "#3776ab", "#092e20", "#336791"],
     metric1: "APIs, Microservices, SaaS",
     metric2: "3–6 weeks for complex systems",
     metric3: "REST, GraphQL, WebSocket",
     cards: [
-      { title: "Node.js & Python", text: "High-performance server runtimes for scalable API architectures." },
+      { title: "Node.js & Python", text: "High performance server runtimes for scalable API architectures." },
       { title: "Database Design", text: "PostgreSQL, MongoDB, Redis — optimized schemas and query performance." },
       { title: "Microservices", text: "Loosely coupled services with event-driven communication patterns." },
     ],
@@ -161,7 +161,7 @@ export default function CraftLab() {
             </h2>
           </div>
           <p className="lead" ref={leadRef} data-reveal>
-            We stay at the forefront of technological advancements — continuously
+            We stay at the forefront of technological advancements continuously
             learning and adopting new tools to deliver the best solutions for our
             clients.
           </p>

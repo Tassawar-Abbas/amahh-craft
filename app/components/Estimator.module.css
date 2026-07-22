@@ -1,0 +1,269 @@
+.estimatorCard {
+  border-radius: 32px;
+  padding: 36px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+              linear-gradient(135deg, #1c1724, #120e18);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow);
+  margin-top: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 32px;
+}
+
+.optionsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.stepBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stepBadge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 139, 123, 0.15);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.stepTitle {
+  font-size: 1.15rem;
+  color: #f7f2eb;
+}
+
+/* ─── Grid Option Buttons ───────────────────────── */
+
+.typesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.typeBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.typeIcon {
+  font-size: 1.3rem;
+}
+
+.scopesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.scopeBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.scopeBtn strong {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.scopeBtn small {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.featureBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.checkMark {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ─── Active States ──────────────────────────────── */
+
+.activeOption {
+  background: linear-gradient(135deg, rgba(255, 139, 123, 0.2), rgba(169, 140, 255, 0.15)) !important;
+  border-color: rgba(255, 139, 123, 0.5) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(255, 139, 123, 0.15);
+}
+
+.activeFeature {
+  background: rgba(169, 140, 255, 0.15) !important;
+  border-color: rgba(169, 140, 255, 0.4) !important;
+  color: #ffffff !important;
+}
+
+.activeFeature .checkMark {
+  background: linear-gradient(135deg, var(--green), #a8f0d4);
+  color: #0d2b1d;
+}
+
+/* ─── Summary Panel ──────────────────────────────── */
+
+.summaryPanel {
+  border-radius: 24px;
+  padding: 28px 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.summaryHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summaryBadge {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffe1bf;
+  font-weight: 700;
+}
+
+.summaryHeader h4 {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.timeValue {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.timeValue strong {
+  font-size: 3.2rem;
+  font-family: var(--font-playfair), "Playfair Display", serif;
+  background: linear-gradient(90deg, #ffffff, #f5c66c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+.timeValue span {
+  font-size: 1.2rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.summaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.summaryRow span {
+  color: var(--muted);
+}
+
+.summaryRow strong {
+  color: #ffffff;
+}
+
+.summaryCta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guaranteeText {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 1.4;
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .estimatorCard {
+    padding: 20px;
+  }
+
+  .typesGrid,
+  .scopesGrid,
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,22 +8,22 @@ const steps = [
   {
     num: "01",
     title: "Discover & Plan",
-    desc: "We deep-dive into your requirements, business goals, and user needs to define a clear technical roadmap and project scope.",
+    desc: "We deep dive into your requirements, business goals, and user needs to define a clear technical roadmap and project scope.",
   },
   {
     num: "02",
     title: "Design & Architect",
-    desc: "UI/UX wireframes, system architecture, and technology selection — aligned to your goals before a single line of code is written.",
+    desc: "UI/UX wireframes, system architecture, and technology selection aligned to your goals before a single line of code is written.",
   },
   {
     num: "03",
     title: "Build & Iterate",
-    desc: "Agile sprints with regular demos and feedback loops — shipping working software incrementally with full transparency.",
+    desc: "Agile sprints with regular demos and feedback loops shipping working software incrementally with full transparency.",
   },
   {
     num: "04",
     title: "Deploy & Support",
-    desc: "Production deployment with CI/CD pipelines, monitoring, and ongoing support to ensure your product runs flawlessly post-launch.",
+    desc: "Production deployment with CI/CD pipelines, monitoring, and ongoing support to ensure your product runs flawlessly post launch.",
   },
 ];
 
@@ -64,8 +64,8 @@ export default function Process() {
             <h2 className="title-lg">How we turn your ideas into reality.</h2>
           </div>
           <p className="lead" ref={leadRef} data-reveal>
-            A proven, agile-driven development process that keeps you informed,
-            in control, and confident at every step — from kick-off to launch.
+            A proven, agile driven development process that keeps you informed,
+            in control, and confident at every step from kick off to launch.
           </p>
         </div>
 
