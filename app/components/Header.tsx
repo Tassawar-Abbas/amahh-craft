@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -24,8 +25,6 @@ export default function Header() {
       setTheme(savedTheme);
       document.documentElement.setAttribute("data-theme", savedTheme);
     } else {
-      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initial = systemDark ? "dark" : "gold";
       setTheme("dark"); // Default to dark as requested
       document.documentElement.setAttribute("data-theme", "dark");
     }
@@ -44,7 +43,7 @@ export default function Header() {
     <header className={styles.siteHeader}>
       <div className="container">
         <div className={styles.nav}>
-          <a href="/" className={styles.brand} aria-label="Amahh Craft home">
+          <Link href="/" className={styles.brand} aria-label="Amahh Craft home">
             <div className={styles.brandMark}>
               <Image
                 src="/image.png"
@@ -59,13 +58,13 @@ export default function Header() {
               <span>Amahh</span>
               <small>Innovative Software Solutions</small>
             </div>
-          </a>
+          </Link>
 
           <nav className={styles.navLinks} aria-label="Primary">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
+              <Link key={link.href} href={link.href}>
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -95,9 +94,9 @@ export default function Header() {
         {menuOpen && (
           <div className={styles.mobileMenu}>
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} onClick={closeMenu}>
+              <Link key={link.href} href={link.href} onClick={closeMenu}>
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a href="#contact" onClick={closeMenu}>
               Get in Touch
