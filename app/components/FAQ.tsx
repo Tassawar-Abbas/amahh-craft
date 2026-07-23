@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import styles from "./FAQ.module.css";
-import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
 const faqItems = [
   {

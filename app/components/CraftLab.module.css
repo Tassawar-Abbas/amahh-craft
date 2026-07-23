@@ -29,11 +29,22 @@
   font-size: 1rem;
 }
 
+[data-theme="gold"] .tabBtn {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(29, 78, 216, 0.1);
+}
+
 .tabBtn:hover,
 .tabActive {
   background: linear-gradient(135deg, rgba(255, 139, 123, 0.16), rgba(169, 140, 255, 0.12));
   border-color: rgba(255, 255, 255, 0.16);
   transform: translateX(5px);
+}
+
+[data-theme="gold"] .tabBtn:hover,
+[data-theme="gold"] .tabActive {
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.08), rgba(5, 150, 105, 0.06));
+  border-color: rgba(29, 78, 216, 0.25);
 }
 
 .tabBtn small {
@@ -50,6 +61,10 @@
   flex-shrink: 0;
 }
 
+[data-theme="gold"] .tabBtn span:last-child {
+  color: var(--accent);
+}
+
 /* ─── Lab preview ────────────────────────────────── */
 
 .labPreview {
@@ -58,6 +73,12 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: var(--shadow);
+}
+
+[data-theme="gold"] .labPreview {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(29, 78, 216, 0.12);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.06);
 }
 
 .labShell {
@@ -74,6 +95,11 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   min-height: 360px;
   transition: background 0.25s ease;
+}
+
+[data-theme="gold"] .previewArt {
+  border-color: rgba(29, 78, 216, 0.1);
+  background: rgba(240, 249, 255, 0.6);
 }
 
 .artCard {
@@ -163,6 +189,11 @@
   display: block;
 }
 
+[data-theme="gold"] .swatch {
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.04);
+}
+
 .metricGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -176,6 +207,12 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+[data-theme="gold"] .metric {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(29, 78, 216, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
 .metric b {
   display: block;
   color: #fff4e0;
@@ -183,12 +220,21 @@
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+[data-theme="gold"] .metric b {
+  color: var(--accent);
 }
 
 .metric span {
   color: #e4d9ef;
   line-height: 1.55;
   font-size: 0.92rem;
+}
+
+[data-theme="gold"] .metric span {
+  color: var(--muted);
 }
 
 /* ─── Responsive ─────────────────────────────────── */

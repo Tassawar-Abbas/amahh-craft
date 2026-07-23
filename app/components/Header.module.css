@@ -5,11 +5,20 @@
   padding: 18px 0;
   background: linear-gradient(
     180deg,
-    rgba(15, 13, 19, 0.86),
-    rgba(15, 13, 19, 0.4),
+    rgba(6, 9, 19, 0.88),
+    rgba(6, 9, 19, 0.4),
     transparent
   );
   backdrop-filter: blur(18px);
+}
+
+[data-theme="gold"] .siteHeader {
+  background: linear-gradient(
+    180deg,
+    rgba(224, 242, 254, 0.92),
+    rgba(240, 249, 255, 0.6),
+    transparent
+  );
 }
 
 .nav {
@@ -22,6 +31,12 @@
   background: rgba(255, 255, 255, 0.04);
   border-radius: 20px;
   box-shadow: var(--shadow);
+}
+
+[data-theme="gold"] .nav {
+  border-color: rgba(29, 78, 216, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .brand {
@@ -56,12 +71,13 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  color: #ddd3ea;
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
 .navLinks a {
   position: relative;
+  color: var(--text);
 }
 
 .navLinks a::after {
@@ -93,13 +109,19 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #fff;
+  color: var(--text);
   font-size: 0.85rem;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
+}
+
+[data-theme="gold"] .themeBtn {
+  border-color: rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
 }
 
 .themeBtn:hover {
@@ -114,19 +136,32 @@
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
-  color: #fff;
+  color: var(--text);
   cursor: pointer;
   font-size: 1.2rem;
   place-items: center;
+}
+
+[data-theme="gold"] .menuToggle {
+  border-color: rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
 }
 
 .mobileMenu {
   margin-top: 12px;
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(22, 19, 27, 0.92);
+  background: var(--bg-soft);
   border-radius: 20px;
   box-shadow: var(--shadow);
+}
+
+[data-theme="gold"] .mobileMenu {
+  border-color: rgba(29, 78, 216, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(16px);
 }
 
 .mobileMenu a {
@@ -140,6 +175,10 @@
 
 .mobileMenu a:hover {
   background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="gold"] .mobileMenu a:hover {
+  background: rgba(29, 78, 216, 0.05);
 }
 
 @media (max-width: 760px) {
