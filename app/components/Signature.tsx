@@ -10,11 +10,19 @@ const filters: FilterKey[] = ["All", "Web", "Mobile", "Enterprise", "AI"];
 
 const projects = [
   {
+    title: "Workistan",
+    desc: "A premium global local services marketplace connecting users with trusted professionals. Post tasks, bid, video talent reels, and chat instantly.",
+    tags: ["Web", "Mobile"],
+    chips: ["TypeScript", "Next.js", "React Native (Expo)", "Supabase", "PostgreSQL", "Tailwind CSS", "Resend"],
+    size: "large",
+    link: "https://joinworkistan.com",
+  },
+  {
     title: "Global Airport Taxi",
     desc: "A seamless transportation booking system with real time tracking, driver management, and automated dispatch for airport transfers worldwide.",
     tags: ["Web", "Mobile"],
     chips: ["React", "Html", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript"],
-    size: "large",
+    size: "normal",
     link: "https://globalairporttaxi.com",
   },
   {

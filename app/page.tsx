@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import Collections from "./components/Collections";
 import Signature from "./components/Signature";
+import Proprietary from "./components/Proprietary";
 import Estimator from "./components/Estimator";
 import CraftLab from "./components/CraftLab";
 import Process from "./components/Process";
@@ -22,6 +23,7 @@ export default function Home() {
         <Marquee />
         <Collections />
         <Signature />
+        <Proprietary />
         <Estimator />
         <CraftLab />
         <Process />

@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#top", label: "Home" },
   { href: "#services", label: "Services" },
   { href: "#projects", label: "Projects" },
+  { href: "#proprietary", label: "Workistan" },
   { href: "#estimator", label: "Estimator" },
   { href: "#reviews", label: "Reviews" },
   { href: "#contact", label: "Contact" },
@@ -59,9 +60,9 @@ export default function Header() {
               type="button"
               className={styles.themeBtn}
               onClick={toggleTheme}
-              title={`Switch to ${theme === "dark" ? "Gold Luxe" : "Cyber Dark"} theme`}
+              title={`Switch to ${theme === "dark" ? "Light theme" : "Dark theme"}`}
             >
-              {theme === "dark" ? "✨ Gold Mode" : "🌙 Cyber Mode"}
+              {theme === "dark" ? "☀️ Light Theme" : "🌙 Dark Theme"}
             </button>
             <a href="#contact" className="btn btn-primary">
               Get in Touch

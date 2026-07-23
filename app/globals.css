@@ -1,29 +1,29 @@
 :root {
-  --bg: #0f0d13;
-  --bg-soft: #17131d;
-  --card: #16131b;
-  --card-2: #1d1824;
-  --line: rgba(255, 255, 255, 0.08);
-  --text: #f7f2eb;
-  --muted: #b8afc5;
-  --accent: #ff8b7b;
-  --accent-2: #f5c66c;
-  --accent-3: #a98cff;
-  --green: #74d6b0;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --bg: #060913;          /* Very deep technical blue-black */
+  --bg-soft: #0b1120;     /* Rich tech navy */
+  --card: #10192e;        /* Clean high-contrast slate-navy */
+  --card-2: #1e293b;      /* Sharp slate hover card */
+  --line: rgba(255, 255, 255, 0.05);
+  --text: #f8fafc;        /* Clear high-contrast tech text */
+  --muted: #94a3b8;       /* Tech slate/muted grey */
+  --accent: #3b82f6;      /* Vibrant Electric Blue */
+  --accent-2: #10b981;    /* Vibrant Emerald Green */
+  --accent-3: #06b6d4;    /* Tech Cyan Glow */
+  --green: #10b981;       /* Minty Success Green */
+  --shadow: 0 25px 65px rgba(0, 0, 0, 0.55);
   --radius: 24px;
   --radius-sm: 18px;
   --container: 1180px;
 }
 
 [data-theme="gold"] {
-  --bg: #120e0a;
-  --bg-soft: #1c1610;
-  --card: #1a140f;
-  --card-2: #241c15;
-  --accent: #f5c66c;
-  --accent-2: #ff9e79;
-  --accent-3: #ffd79e;
+  --bg: #040814;          /* Deep ocean dark theme */
+  --bg-soft: #091026;     /* Deep tech navy */
+  --card: #0d1a36;        /* High density tech card */
+  --card-2: #172c54;      /* Strong hover state */
+  --accent: #2563eb;      /* Electric Royal Blue */
+  --accent-2: #059669;    /* Clean Mint Tech Green */
+  --accent-3: #22d3ee;    /* Approachable Cyber Cyan */
 }
 
 *,
@@ -41,10 +41,10 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font-inter), Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background: radial-gradient(circle at 10% 20%, rgba(255, 139, 123, 0.16), transparent 28%),
-    radial-gradient(circle at 85% 12%, rgba(169, 140, 255, 0.18), transparent 26%),
-    radial-gradient(circle at 80% 80%, rgba(245, 198, 108, 0.12), transparent 30%),
-    linear-gradient(180deg, #0d0b10 0%, #120f17 50%, #0f0d13 100%);
+  background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.12), transparent 32%),
+    radial-gradient(circle at 85% 12%, rgba(6, 182, 212, 0.14), transparent 28%),
+    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.09), transparent 35%),
+    linear-gradient(180deg, #04060d 0%, #060913 50%, #080d1a 100%);
   min-height: 100vh;
   overflow-x: hidden;
 }
