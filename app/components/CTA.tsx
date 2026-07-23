@@ -106,7 +106,7 @@ export default function CTA() {
           </div>
 
           <div className={styles.footerRow}>
-            <div>© 2026 Amahh. All rights reserved. Crafted with passion.</div>
+            <div>© 2025 Amahh. All rights reserved. Crafted with passion.</div>
             <div className={styles.socialLinks}>
               <a href="https://github.com/Tassawar-Abbas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
