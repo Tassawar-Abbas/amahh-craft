@@ -7,15 +7,21 @@
   overflow: hidden;
   border-radius: 34px;
   padding: 46px 40px;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 139, 123, 0.2), transparent 24%),
-    radial-gradient(circle at 80% 80%, rgba(169, 140, 255, 0.22), transparent 26%),
-    linear-gradient(135deg, #1d1723, #120f17);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.12), transparent 28%),
+    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.12), transparent 30%),
+    linear-gradient(135deg, var(--card-2), var(--card));
+  border: 1px solid var(--line);
   box-shadow: var(--shadow);
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 24px;
   align-items: center;
+}
+
+[data-theme="gold"] .cta {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+  border-color: rgba(29, 78, 216, 0.12);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
 }
 
 .contactPills {
@@ -29,9 +35,15 @@
   padding: 12px 14px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #ece1f6;
+  border: 1px solid var(--line);
+  color: var(--text);
   font-size: 0.9rem;
+}
+
+[data-theme="gold"] .contactPill {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(29, 78, 216, 0.1);
+  color: var(--text);
 }
 
 /* ─── Footer ─────────────────────────────────────── */
@@ -41,6 +53,10 @@
   color: #bdb3cb;
 }
 
+[data-theme="gold"] .footer {
+  color: var(--muted);
+}
+
 .footerTop {
   display: flex;
   justify-content: space-between;
@@ -48,6 +64,10 @@
   padding-bottom: 36px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   flex-wrap: wrap;
+}
+
+[data-theme="gold"] .footerTop {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
 .footerBrand {
@@ -137,10 +157,22 @@
               background 0.18s ease, color 0.18s ease;
 }
 
+[data-theme="gold"] .socialLinks a {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--muted);
+}
+
 .socialLinks a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text);
   transform: translateY(-3px);
+}
+
+[data-theme="gold"] .socialLinks a:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(29, 78, 216, 0.15);
+  color: var(--accent);
 }
 
 /* ─── Responsive ─────────────────────────────────── */

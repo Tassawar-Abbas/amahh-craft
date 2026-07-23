@@ -1,28 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Header.module.css";
 
 const navLinks = [
-  { href: "#top", label: "Home" },
-  { href: "#services", label: "Services" },
-  { href: "#projects", label: "Projects" },
-  { href: "#proprietary", label: "Workistan" },
-  { href: "#estimator", label: "Estimator" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/projects", label: "Projects" },
+  { href: "/projects#proprietary", label: "Workistan" },
+  { href: "/estimator", label: "Estimator" },
+  { href: "/reviews", label: "Reviews" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"dark" | "gold">("dark");
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("amahh-theme") as "dark" | "gold" | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const initial = systemDark ? "dark" : "gold";
+      setTheme("dark"); // Default to dark as requested
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  }, []);
+
   const closeMenu = () => setMenuOpen(false);
 
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "gold" : "dark";
     setTheme(nextTheme);
+    localStorage.setItem("amahh-theme", nextTheme);
     document.documentElement.setAttribute("data-theme", nextTheme);
   };
 
@@ -30,7 +44,7 @@ export default function Header() {
     <header className={styles.siteHeader}>
       <div className="container">
         <div className={styles.nav}>
-          <a href="#top" className={styles.brand} aria-label="Amahh Craft home">
+          <a href="/" className={styles.brand} aria-label="Amahh Craft home">
             <div className={styles.brandMark}>
               <Image
                 src="/image.png"
