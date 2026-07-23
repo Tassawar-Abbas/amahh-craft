@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import styles from "./CTA.module.css";
 import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
@@ -71,7 +72,15 @@ export default function CTA() {
         <footer className={styles.footer}>
           <div className={styles.footerTop}>
             <div className={styles.footerBrand}>
-              <div className={styles.footerLogo} />
+              <div className={styles.footerLogo}>
+                <Image
+                  src="/image.png"
+                  alt="Amahh Logo"
+                  width={42}
+                  height={42}
+                  style={{ borderRadius: "12px", objectFit: "cover" }}
+                />
+              </div>
               <div>
                 <strong>Amahh</strong>
                 <p>We build innovative software solutions that drive business growth and enhance user experiences.</p>
