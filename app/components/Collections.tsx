@@ -107,7 +107,10 @@ export default function Collections() {
           }
         });
       },
-      { threshold: 0.08 }
+      { 
+        threshold: 0.02,
+        rootMargin: "0px 0px 40px 0px"
+      }
     );
 
     const cardEls = document.querySelectorAll(`.${styles.spotlightCard}`);

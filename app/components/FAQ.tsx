@@ -39,7 +39,10 @@ export default function FAQ() {
           }
         });
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.02,
+        rootMargin: "0px 0px 40px 0px"
+      }
     );
 
     [headRef.current, leadRef.current, introRef.current].forEach((el) => {

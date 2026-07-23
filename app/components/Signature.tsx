@@ -67,19 +67,27 @@ export default function Signature() {
           }
         });
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.02,
+        rootMargin: "0px 0px 40px 0px"
+      }
     );
 
     const bentos = document.querySelectorAll(`.${styles.bentoCard}`);
-    [headRef.current, leadRef.current, ...Array.from(bentos)].forEach((el) => {
+    const targets = [headRef.current, leadRef.current, ...Array.from(bentos)];
+    
+    targets.forEach((el) => {
       if (el) {
-        el.setAttribute("data-reveal", "");
-        observer.observe(el);
+        // If it was already seen, make sure it stays seen or reset correctly
+        if (!el.classList.contains("is-seen")) {
+          el.setAttribute("data-reveal", "");
+          observer.observe(el);
+        }
       }
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [filtered]);
 
   return (
     <section className="section" id="projects">
