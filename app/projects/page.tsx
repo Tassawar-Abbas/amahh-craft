@@ -7,8 +7,11 @@ import WhatsAppFab from "@/app/components/WhatsAppFab";
 import AmbientCursor from "@/app/components/AmbientCursor";
 
 export const metadata: Metadata = {
-  title: "Projects — Amahh Technology",
-  description: "Explore our portfolio of web, mobile, enterprise and AI projects built for global clients.",
+  title: "Projects Portfolio | Amahh Technology Software Development",
+  description: "Explore Amahh Technology's portfolio of software projects including Workistan, mobile apps, web platforms, enterprise solutions, and AI applications built for global clients using Next.js, React, and modern technologies.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 export default function ProjectsPage() {

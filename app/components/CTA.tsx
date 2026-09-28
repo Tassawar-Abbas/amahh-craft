@@ -89,17 +89,26 @@ export default function CTA() {
             <div className={styles.footerLinks}>
               <div className={styles.footerCol}>
                 <h4>Quick Links</h4>
-                <a href="#top">Home</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="/">Home</a>
+                <a href="/services">Services</a>
+                <a href="/projects">Projects</a>
+                <a href="/products/workistan">Workistan</a>
+                <a href="/products/mymediscribe">MyMediScribe</a>
+                <a href="/contact">Contact</a>
+              </div>
+              <div className={styles.footerCol}>
+                <h4>Services</h4>
+                <a href="/services/web-development">Web Development</a>
+                <a href="/services/mobile-app-development">Mobile App Development</a>
+                <a href="/services/custom-software-development">Custom Software</a>
+                <a href="/services/ai-solutions">AI Solutions</a>
+                <a href="/services/ecommerce-development">E-commerce</a>
               </div>
               <div className={styles.footerCol}>
                 <h4>Contact Us</h4>
                 <a href="https://wa.me/923714932094" target="_blank" rel="noopener noreferrer">
                   WhatsApp: +92 3714932094
                 </a>
-
                 <a href="mailto:amahh.tech@gmail.com">amahh.tech@gmail.com</a>
               </div>
             </div>

@@ -6,8 +6,11 @@ import WhatsAppFab from "@/app/components/WhatsAppFab";
 import AmbientCursor from "@/app/components/AmbientCursor";
 
 export const metadata: Metadata = {
-  title: "Services — Amahh Technology",
-  description: "Explore our full range of software development services — from web & mobile apps to AI, cloud, and enterprise solutions.",
+  title: "Services | Amahh Technology - Web, Mobile, AI & Software Development",
+  description: "Explore Amahh Technology's full range of software development services: web development, mobile apps, custom software, AI solutions, SaaS, e-commerce, cloud infrastructure, and DevOps for businesses worldwide.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {

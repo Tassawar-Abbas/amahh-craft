@@ -6,8 +6,11 @@ import WhatsAppFab from "@/app/components/WhatsAppFab";
 import AmbientCursor from "@/app/components/AmbientCursor";
 
 export const metadata: Metadata = {
-  title: "Contact — Amahh Technology",
-  description: "Get in touch with Amahh Technology to discuss your project, get a quote, or ask us anything.",
+  title: "Contact Amahh Technology | Software Development Company",
+  description: "Get in touch with Amahh Technology for your software development project. Contact us via WhatsApp at +923714932094 or email amahh.tech@gmail.com for web, mobile, AI, and custom software solutions.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
