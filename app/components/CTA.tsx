@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./CTA.module.css";
 import { applyTilt, resetTilt } from "@/app/lib/tilt";
 
@@ -89,20 +90,20 @@ export default function CTA() {
             <div className={styles.footerLinks}>
               <div className={styles.footerCol}>
                 <h4>Quick Links</h4>
-                <a href="/">Home</a>
-                <a href="/services">Services</a>
-                <a href="/projects">Projects</a>
-                <a href="/products/workistan">Workistan</a>
-                <a href="/products/mymediscribe">MyMediScribe</a>
-                <a href="/contact">Contact</a>
+                <Link href="/">Home</Link>
+                <Link href="/services">Services</Link>
+                <Link href="/projects">Projects</Link>
+                <Link href="/products/workistan">Workistan</Link>
+                <Link href="/products/mymediscribe">MyMediScribe</Link>
+                <Link href="/contact">Contact</Link>
               </div>
               <div className={styles.footerCol}>
                 <h4>Services</h4>
-                <a href="/services/web-development">Web Development</a>
-                <a href="/services/mobile-app-development">Mobile App Development</a>
-                <a href="/services/custom-software-development">Custom Software</a>
-                <a href="/services/ai-solutions">AI Solutions</a>
-                <a href="/services/ecommerce-development">E-commerce</a>
+                <Link href="/services/web-development">Web Development</Link>
+                <Link href="/services/mobile-app-development">Mobile App Development</Link>
+                <Link href="/services/custom-software-development">Custom Software</Link>
+                <Link href="/services/ai-solutions">AI Solutions</Link>
+                <Link href="/services/ecommerce-development">E-commerce</Link>
               </div>
               <div className={styles.footerCol}>
                 <h4>Contact Us</h4>

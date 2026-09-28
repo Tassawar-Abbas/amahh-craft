@@ -24,7 +24,7 @@ export default function CustomSoftwareDevelopmentPage() {
               <span className="eyebrow">Custom Software Development</span>
               <h1 className="title-lg">Tailored Software Solutions for Your Business</h1>
               <p className="lead">
-                We build custom software solutions designed to address your specific business needs. Off-the-shelf solutions don't always fit—our team creates bespoke software that aligns perfectly with your workflows and objectives.
+                We build custom software solutions designed to address your specific business needs. Off-the-shelf solutions do not always fit—our team creates bespoke software that aligns perfectly with your workflows and objectives.
               </p>
             </div>
 
